@@ -8,4 +8,6 @@ function showProduct(first: number, second: number): void {
 
 showProduct(a, b);
 
+export{}; //make file ES module
+
 // Mathematical! The result is 20
