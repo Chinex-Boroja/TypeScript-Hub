@@ -25,3 +25,8 @@ let secondBatch = 7
 
  bonusPoints = bonusPoints + 45
  console.log(bonusPoints)
+
+ let username = "Nedu"
+ let message = "You have three new notifications"
+
+ console.log(message + "," + username)
