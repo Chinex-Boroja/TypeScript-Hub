@@ -1,9 +1,10 @@
- //1. create two variables, firstCard and secondCard.
- // Set their values to a random number between 2-11
-
- // 2. Create a variable, sum, and set it to the sum of the two cards.
+// create the player object. Give it two keys, name and chips
+let player = {
+   name: "Chinedu",
+   chips: 145
+ }
+ 
  let cards = [] // array - ordered list of item
-
  let sum = 0
  let hasBlackJack = false
  let isAlive = false
@@ -12,7 +13,11 @@
 //  let sumEl = document.getElementById("sum-el")
  let sumEl = document.querySelector(".sum-el")
  let cardEl = document.getElementById("cards-el")
- console.log(cards)
+
+ //Get the player-el from the DOM
+ let playerEl = document.getElementById("player-el")
+ // Render the player's name and chips in playerEl
+ playerEl.textContent = player.name + ": #" + player.chips
 
  function getRandomCard() {
    let randomNumber = Math.floor(Math.random() * 13) + 1
@@ -58,12 +63,13 @@
  }
 
  function newCard() {
-
-   let card = getRandomCard()
-   sum += card
-   cards.push(card)
-   console.log(cards)
-   renderGame()
+   if (isAlive === true && !hasBlackJack) {
+      let card = getRandomCard()
+      sum += card
+      cards.push(card)
+      renderGame()
+   }
+   //console.log(cards)
  }
  // CASH OUT
  console.log(hasBlackJack)

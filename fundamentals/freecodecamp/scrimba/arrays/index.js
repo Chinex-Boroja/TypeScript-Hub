@@ -34,3 +34,13 @@ messages.splice(messages.length - 1, 1)
 messages.reverse().shift()
 messages.push(0)
 messages.pop()
+
+
+let largeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"]
+
+largeCountries.pop()
+largeCountries.push("Pakistan")
+largeCountries.shift()
+largeCountries.unshift("China")
+console.log(largeCountries)
+
