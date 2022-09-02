@@ -73,3 +73,10 @@ shippingTime = "7-14 days"
 
 const fullPrice = basePrice - discount + shippingCost
 console.log("Total cost: " + fullPrice + ". It will arrive in " + shippingTime)
+
+// Template strings
+const recipient = "James"
+const sender = "Chinex"
+
+const email = `Hey ${recipient}! How is it going? Cheers ${sender}`
+console.log(email)
